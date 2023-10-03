@@ -17,6 +17,7 @@
 		32AB3B6D2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */; };
 		32CBD91C2ACBA6D6002E379F /* mock_airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 32CBD91B2ACBA6D6002E379F /* mock_airports.json */; };
 		32F228942ACBCBBF00E32BEF /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 32F228932ACBCBBF00E32BEF /* countries.json */; };
+		32F228972ACBCF2D00E32BEF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F228962ACBCF2D00E32BEF /* Country.swift */; };
 		32FABEC32ACA8530008CEFE0 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FABEC22ACA8530008CEFE0 /* Airport.swift */; };
 		32FABEC72ACA8671008CEFE0 /* AirportListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FABEC62ACA8671008CEFE0 /* AirportListViewModel.swift */; };
 		32FABEC92ACA868C008CEFE0 /* AirportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FABEC82ACA868C008CEFE0 /* AirportListView.swift */; };
@@ -53,6 +54,7 @@
 		32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		32CBD91B2ACBA6D6002E379F /* mock_airports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_airports.json; sourceTree = "<group>"; };
 		32F228932ACBCBBF00E32BEF /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		32F228962ACBCF2D00E32BEF /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		32FABEC22ACA8530008CEFE0 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		32FABEC62ACA8671008CEFE0 /* AirportListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModel.swift; sourceTree = "<group>"; };
 		32FABEC82ACA868C008CEFE0 /* AirportListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListView.swift; sourceTree = "<group>"; };
@@ -106,11 +108,11 @@
 		32AB3B4E2ACA7C3E007C7528 /* Airports */ = {
 			isa = PBXGroup;
 			children = (
+				32F228952ACBCF2100E32BEF /* Models */,
 				32AB3B4F2ACA7C3E007C7528 /* AirportsApp.swift */,
 				32AB3B512ACA7C3E007C7528 /* ContentView.swift */,
 				32AB3B532ACA7C3E007C7528 /* Assets.xcassets */,
 				32AB3B552ACA7C3E007C7528 /* Preview Content */,
-				32FABEC22ACA8530008CEFE0 /* Airport.swift */,
 				32FABEC62ACA8671008CEFE0 /* AirportListViewModel.swift */,
 				32A1490A2ACBA30600D8E87A /* airports.json */,
 				32FABEC82ACA868C008CEFE0 /* AirportListView.swift */,
@@ -143,6 +145,15 @@
 				32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */,
 			);
 			path = AirportsUITests;
+			sourceTree = "<group>";
+		};
+		32F228952ACBCF2100E32BEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32FABEC22ACA8530008CEFE0 /* Airport.swift */,
+				32F228962ACBCF2D00E32BEF /* Country.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				32FABEC92ACA868C008CEFE0 /* AirportListView.swift in Sources */,
 				32AB3B522ACA7C3E007C7528 /* ContentView.swift in Sources */,
 				32FABEC72ACA8671008CEFE0 /* AirportListViewModel.swift in Sources */,
+				32F228972ACBCF2D00E32BEF /* Country.swift in Sources */,
 				32AB3B502ACA7C3E007C7528 /* AirportsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,13 +1,12 @@
 [
   {
     "iata": "CTF",
-    "lon": "-91.916664",
+    "lon": -91.916664,
     "iso": "PE",
-    "status": 1,
+    "is_open": true,
     "name": "Contamana Airport",
     "continent": "SA",
     "type": "airport",
-    "lat": "14.766667",
-    "size": "small"
+    "lat": 14.766667
   }
 ]
