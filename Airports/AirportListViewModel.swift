@@ -16,6 +16,7 @@ class AirportListViewModel: ObservableObject {
     do {
       let data = try Data(contentsOf: url)
       let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
       self.airports = try decoder.decode([Airport].self, from: data)
     } catch {
       print("Error decoding the airport list: \(error)")

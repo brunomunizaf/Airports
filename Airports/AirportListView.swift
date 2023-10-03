@@ -10,12 +10,8 @@ struct AirportListView: View {
           Text(airport.id)
           Text(airport.name)
           Text(airport.continent)
-          if let lat = airport.lat {
-            Text(lat)
-          }
-          if let lon = airport.lon {
-            Text(lon)
-          }
+          Text("\(airport.lat)")
+          Text("\(airport.lon)")
         } label: {
           Text(airport.name)
         }
