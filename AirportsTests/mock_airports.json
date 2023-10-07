@@ -2,11 +2,14 @@
   {
     "iata": "CTF",
     "lon": -91.916664,
-    "iso": "PE",
     "is_open": true,
-    "name": "Contamana Airport",
-    "continent": "SA",
+    "name": "Coatepeque Airport",
+    "continent": "NA",
     "type": "airport",
-    "lat": 14.766667
+    "lat": 14.766667,
+    "country": {
+      "iso": "GT",
+      "name": "Guatemala"
+    }
   }
 ]

@@ -6,12 +6,15 @@ final class AirportsTests: XCTestCase {
     let mockAirport = Airport(
       id: "CTF",
       lon: -91.916664,
-      iso: "PE",
       isOpen: true,
       name: "Contamana Airport",
       continent: "SA",
       type: "airport",
-      lat: 14.766667
+      lat: 14.766667,
+      country: Country(
+        iso: "GT",
+        name: "Guatemala"
+      )
     )
 
     let bundle = Bundle(for: AirportsTests.self)

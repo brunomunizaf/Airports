@@ -6,23 +6,26 @@ struct SectionItem: Identifiable {
   var airports: [Airport]
 }
 
+enum AirportListViewModelError: Error {
+  case fileNotFound
+}
+
 final class AirportListViewModel: ObservableObject {
   @Published var items: [SectionItem] = []
 
-  init() {
-    loadAirports()
+  public func getDataFromJSON(bundle: Bundle = .main) throws -> Data {
+    guard let airportsURL = bundle.url(forResource: "airports", withExtension: "json") else {
+      throw AirportListViewModelError.fileNotFound
+    }
+    return try Data(contentsOf: airportsURL)
   }
 
-  private func loadAirports() {
-    guard let airportsURL = Bundle.main.url(forResource: "airports", withExtension: "json") else {
-      print("Invalid filename/path.")
-      return
-    }
+  public func loadAirports(from data: Data) {
     do {
       let decoder = JSONDecoder()
       decoder.keyDecodingStrategy = .convertFromSnakeCase
-      let airportsData = try Data(contentsOf: airportsURL)
-      let airports = try decoder.decode([Airport].self, from: airportsData)
+
+      let airports = try decoder.decode([Airport].self, from: data)
       let groupedByCountry = Dictionary(grouping: airports, by: \.country)
         .sorted(by: { $0.key.name < $1.key.name })
 

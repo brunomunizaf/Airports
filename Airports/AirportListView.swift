@@ -23,13 +23,15 @@ struct AirportListView: View {
       }
       .navigationTitle("Airports")
     }
+    .onAppear(perform: loadData)
     .searchable(text: $searchText) {
       ForEach(searchResults) { result in
         Section(header: Text(result.country.name)) {
           ForEach(result.airports) { airport in
             HStack {
-              Text(airport.id)
               Text(airport.name)
+              Spacer()
+              Text(airport.id)
             }
           }
         }
@@ -55,6 +57,15 @@ struct AirportListView: View {
         }
       }
       return filteredItems
+    }
+  }
+
+  func loadData() {
+    do {
+      let data = try viewModel.getDataFromJSON()
+      viewModel.loadAirports(from: data)
+    } catch {
+      print("Error loading data: \(error)")
     }
   }
 }
