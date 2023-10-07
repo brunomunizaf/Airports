@@ -10,11 +10,7 @@ struct AirportListView: View {
         Section(header: Text(item.country.name)) {
           ForEach(item.airports) { airport in
             NavigationLink {
-              Text(airport.id)
-              Text(airport.name)
-              Text(airport.continent)
-              Text("\(airport.lat)")
-              Text("\(airport.lon)")
+              AirportInfoView(airport: airport)
             } label: {
               Text(airport.name)
             }

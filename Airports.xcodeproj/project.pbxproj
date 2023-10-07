@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324E23ED2AD0F9B600198221 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 324E23EC2AD0F9B600198221 /* Lottie */; };
+		324E23EF2AD0FAFD00198221 /* launch_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 324E23EE2AD0FAFD00198221 /* launch_animation.json */; };
+		324E23F12AD0FB4000198221 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E23F02AD0FB4000198221 /* LaunchView.swift */; };
+		324E23F52AD104D900198221 /* AirportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E23F42AD104D900198221 /* AirportInfoView.swift */; };
 		32A1490B2ACBA30600D8E87A /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 32A1490A2ACBA30600D8E87A /* airports.json */; };
 		32AB3B502ACA7C3E007C7528 /* AirportsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B4F2ACA7C3E007C7528 /* AirportsApp.swift */; };
 		32AB3B522ACA7C3E007C7528 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B512ACA7C3E007C7528 /* ContentView.swift */; };
@@ -41,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		324E23EE2AD0FAFD00198221 /* launch_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch_animation.json; sourceTree = "<group>"; };
+		324E23F02AD0FB4000198221 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		324E23F42AD104D900198221 /* AirportInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInfoView.swift; sourceTree = "<group>"; };
 		32A1490A2ACBA30600D8E87A /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		32AB3B4C2ACA7C3E007C7528 /* Airports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AB3B4F2ACA7C3E007C7528 /* AirportsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsApp.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324E23ED2AD0F9B600198221 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324E23F22AD1048E00198221 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				32AB3B512ACA7C3E007C7528 /* ContentView.swift */,
+				32FABEC82ACA868C008CEFE0 /* AirportListView.swift */,
+				324E23F02AD0FB4000198221 /* LaunchView.swift */,
+				324E23F42AD104D900198221 /* AirportInfoView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		324E23F32AD104A200198221 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				32FABEC62ACA8671008CEFE0 /* AirportListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		32AB3B432ACA7C3E007C7528 = {
 			isa = PBXGroup;
 			children = (
@@ -108,14 +135,14 @@
 		32AB3B4E2ACA7C3E007C7528 /* Airports */ = {
 			isa = PBXGroup;
 			children = (
+				324E23F32AD104A200198221 /* ViewModels */,
+				324E23F22AD1048E00198221 /* Screens */,
 				32F228952ACBCF2100E32BEF /* Models */,
 				32AB3B4F2ACA7C3E007C7528 /* AirportsApp.swift */,
-				32AB3B512ACA7C3E007C7528 /* ContentView.swift */,
 				32AB3B532ACA7C3E007C7528 /* Assets.xcassets */,
 				32AB3B552ACA7C3E007C7528 /* Preview Content */,
-				32FABEC62ACA8671008CEFE0 /* AirportListViewModel.swift */,
 				32A1490A2ACBA30600D8E87A /* airports.json */,
-				32FABEC82ACA868C008CEFE0 /* AirportListView.swift */,
+				324E23EE2AD0FAFD00198221 /* launch_animation.json */,
 				32F228932ACBCBBF00E32BEF /* countries.json */,
 			);
 			path = Airports;
@@ -172,6 +199,9 @@
 			dependencies = (
 			);
 			name = Airports;
+			packageProductDependencies = (
+				324E23EC2AD0F9B600198221 /* Lottie */,
+			);
 			productName = Airports;
 			productReference = 32AB3B4C2ACA7C3E007C7528 /* Airports.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 32AB3B432ACA7C3E007C7528;
+			packageReferences = (
+				324E23EB2AD0F9B600198221 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 32AB3B4D2ACA7C3E007C7528 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +295,7 @@
 			files = (
 				32AB3B572ACA7C3E007C7528 /* Preview Assets.xcassets in Resources */,
 				32AB3B542ACA7C3E007C7528 /* Assets.xcassets in Resources */,
+				324E23EF2AD0FAFD00198221 /* launch_animation.json in Resources */,
 				32F228942ACBCBBF00E32BEF /* countries.json in Resources */,
 				32A1490B2ACBA30600D8E87A /* airports.json in Resources */,
 			);
@@ -289,9 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324E23F52AD104D900198221 /* AirportInfoView.swift in Sources */,
 				32FABEC32ACA8530008CEFE0 /* Airport.swift in Sources */,
 				32FABEC92ACA868C008CEFE0 /* AirportListView.swift in Sources */,
 				32AB3B522ACA7C3E007C7528 /* ContentView.swift in Sources */,
+				324E23F12AD0FB4000198221 /* LaunchView.swift in Sources */,
 				32FABEC72ACA8671008CEFE0 /* AirportListViewModel.swift in Sources */,
 				32F228972ACBCF2D00E32BEF /* Country.swift in Sources */,
 				32AB3B502ACA7C3E007C7528 /* AirportsApp.swift in Sources */,
@@ -618,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		324E23EB2AD0F9B600198221 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		324E23EC2AD0F9B600198221 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 324E23EB2AD0F9B600198221 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32AB3B442ACA7C3E007C7528 /* Project object */;
 }
