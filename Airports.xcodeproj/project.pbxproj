@@ -16,9 +16,7 @@
 		32AB3B522ACA7C3E007C7528 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B512ACA7C3E007C7528 /* ContentView.swift */; };
 		32AB3B542ACA7C3E007C7528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AB3B532ACA7C3E007C7528 /* Assets.xcassets */; };
 		32AB3B572ACA7C3E007C7528 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AB3B562ACA7C3E007C7528 /* Preview Assets.xcassets */; };
-		32AB3B612ACA7C3F007C7528 /* AirportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B602ACA7C3F007C7528 /* AirportsTests.swift */; };
-		32AB3B6B2ACA7C3F007C7528 /* AirportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B6A2ACA7C3F007C7528 /* AirportsUITests.swift */; };
-		32AB3B6D2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */; };
+		32AB3B612ACA7C3F007C7528 /* AirportListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB3B602ACA7C3F007C7528 /* AirportListViewModelTests.swift */; };
 		32CBD91C2ACBA6D6002E379F /* mock_airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 32CBD91B2ACBA6D6002E379F /* mock_airports.json */; };
 		32F228942ACBCBBF00E32BEF /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 32F228932ACBCBBF00E32BEF /* countries.json */; };
 		32F228972ACBCF2D00E32BEF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F228962ACBCF2D00E32BEF /* Country.swift */; };
@@ -29,13 +27,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		32AB3B5D2ACA7C3F007C7528 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 32AB3B442ACA7C3E007C7528 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 32AB3B4B2ACA7C3E007C7528;
-			remoteInfo = Airports;
-		};
-		32AB3B672ACA7C3F007C7528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 32AB3B442ACA7C3E007C7528 /* Project object */;
 			proxyType = 1;
@@ -55,10 +46,7 @@
 		32AB3B532ACA7C3E007C7528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AB3B562ACA7C3E007C7528 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32AB3B5C2ACA7C3F007C7528 /* AirportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32AB3B602ACA7C3F007C7528 /* AirportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsTests.swift; sourceTree = "<group>"; };
-		32AB3B662ACA7C3F007C7528 /* AirportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32AB3B6A2ACA7C3F007C7528 /* AirportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsUITests.swift; sourceTree = "<group>"; };
-		32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32AB3B602ACA7C3F007C7528 /* AirportListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportListViewModelTests.swift; sourceTree = "<group>"; };
 		32CBD91B2ACBA6D6002E379F /* mock_airports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_airports.json; sourceTree = "<group>"; };
 		32F228932ACBCBBF00E32BEF /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		32F228962ACBCF2D00E32BEF /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -77,13 +65,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		32AB3B592ACA7C3F007C7528 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32AB3B632ACA7C3F007C7528 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,7 +98,6 @@
 			children = (
 				32AB3B4E2ACA7C3E007C7528 /* Airports */,
 				32AB3B5F2ACA7C3F007C7528 /* AirportsTests */,
-				32AB3B692ACA7C3F007C7528 /* AirportsUITests */,
 				32AB3B4D2ACA7C3E007C7528 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,7 +107,6 @@
 			children = (
 				32AB3B4C2ACA7C3E007C7528 /* Airports.app */,
 				32AB3B5C2ACA7C3F007C7528 /* AirportsTests.xctest */,
-				32AB3B662ACA7C3F007C7528 /* AirportsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,19 +138,10 @@
 		32AB3B5F2ACA7C3F007C7528 /* AirportsTests */ = {
 			isa = PBXGroup;
 			children = (
-				32AB3B602ACA7C3F007C7528 /* AirportsTests.swift */,
+				32AB3B602ACA7C3F007C7528 /* AirportListViewModelTests.swift */,
 				32CBD91B2ACBA6D6002E379F /* mock_airports.json */,
 			);
 			path = AirportsTests;
-			sourceTree = "<group>";
-		};
-		32AB3B692ACA7C3F007C7528 /* AirportsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				32AB3B6A2ACA7C3F007C7528 /* AirportsUITests.swift */,
-				32AB3B6C2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift */,
-			);
-			path = AirportsUITests;
 			sourceTree = "<group>";
 		};
 		32F228952ACBCF2100E32BEF /* Models */ = {
@@ -224,24 +194,6 @@
 			productReference = 32AB3B5C2ACA7C3F007C7528 /* AirportsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		32AB3B652ACA7C3F007C7528 /* AirportsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 32AB3B762ACA7C3F007C7528 /* Build configuration list for PBXNativeTarget "AirportsUITests" */;
-			buildPhases = (
-				32AB3B622ACA7C3F007C7528 /* Sources */,
-				32AB3B632ACA7C3F007C7528 /* Frameworks */,
-				32AB3B642ACA7C3F007C7528 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				32AB3B682ACA7C3F007C7528 /* PBXTargetDependency */,
-			);
-			name = AirportsUITests;
-			productName = AirportsUITests;
-			productReference = 32AB3B662ACA7C3F007C7528 /* AirportsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,10 +208,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					32AB3B5B2ACA7C3F007C7528 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 32AB3B4B2ACA7C3E007C7528;
-					};
-					32AB3B652ACA7C3F007C7528 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 32AB3B4B2ACA7C3E007C7528;
 					};
@@ -283,7 +231,6 @@
 			targets = (
 				32AB3B4B2ACA7C3E007C7528 /* Airports */,
 				32AB3B5B2ACA7C3F007C7528 /* AirportsTests */,
-				32AB3B652ACA7C3F007C7528 /* AirportsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +256,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32AB3B642ACA7C3F007C7528 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,16 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AB3B612ACA7C3F007C7528 /* AirportsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32AB3B622ACA7C3F007C7528 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				32AB3B6D2ACA7C3F007C7528 /* AirportsUITestsLaunchTests.swift in Sources */,
-				32AB3B6B2ACA7C3F007C7528 /* AirportsUITests.swift in Sources */,
+				32AB3B612ACA7C3F007C7528 /* AirportListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +289,6 @@
 			isa = PBXTargetDependency;
 			target = 32AB3B4B2ACA7C3E007C7528 /* Airports */;
 			targetProxy = 32AB3B5D2ACA7C3F007C7528 /* PBXContainerItemProxy */;
-		};
-		32AB3B682ACA7C3F007C7528 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 32AB3B4B2ACA7C3E007C7528 /* Airports */;
-			targetProxy = 32AB3B672ACA7C3F007C7528 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -580,40 +506,6 @@
 			};
 			name = Release;
 		};
-		32AB3B772ACA7C3F007C7528 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bmz.AirportsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Airports;
-			};
-			name = Debug;
-		};
-		32AB3B782ACA7C3F007C7528 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bmz.AirportsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Airports;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,15 +532,6 @@
 			buildConfigurations = (
 				32AB3B742ACA7C3F007C7528 /* Debug */,
 				32AB3B752ACA7C3F007C7528 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		32AB3B762ACA7C3F007C7528 /* Build configuration list for PBXNativeTarget "AirportsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				32AB3B772ACA7C3F007C7528 /* Debug */,
-				32AB3B782ACA7C3F007C7528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
