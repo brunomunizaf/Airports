@@ -14,10 +14,16 @@ struct AirportListView: View {
                 NavigationLink {
                   AirportInfoView(airport: airport)
                 } label: {
-                  Text(airport.name)
+                  HStack {
+                    Text(airport.name)
+                    Spacer()
+                    Image(systemName: "airplane")
+                      .foregroundColor(.primary)
+                  }
                 }
               }
             }
+            .tint(.primary)
           }
         }
       }
@@ -26,15 +32,23 @@ struct AirportListView: View {
     .onAppear(perform: loadData)
     .searchable(text: $searchText) {
       ForEach(searchResults) { sectionItem in
-        Section(header: Text(sectionItem.continent.name)) {
-          ForEach(sectionItem.subsections) { subsection in
-            HStack {
-              Text(subsection.country.name)
-              Spacer()
-              Text(subsection.country.iso)
+        Section(header: Text(sectionItem.continent.name)
+          .padding(8)
+          .background(Color.blue)
+          .foregroundColor(.white)
+          .cornerRadius(8)) {
+            ForEach(sectionItem.subsections) { subsection in
+              HStack {
+                Text(subsection.country.name)
+                  .fontWeight(.medium)
+                Spacer()
+                Text(subsection.country.iso)
+                  .font(.subheadline)
+                  .foregroundColor(.gray)
+              }
+              .padding(.vertical, 5)
             }
           }
-        }
       }
     }
 

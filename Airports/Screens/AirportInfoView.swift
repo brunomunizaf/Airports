@@ -3,36 +3,34 @@ import SwiftUI
 
 struct AirportInfoView: View {
   let airport: Airport
+  @State private var isSheetPresented = false
 
   var body: some View {
     NavigationStack {
       VStack(alignment: .leading) {
         VStack(alignment: .leading, spacing: 10) {
-          HStack {
-            Text("Name:")
-              .font(.headline)
-            Text(airport.name)
-          }
-          HStack {
-            HStack {
-              Text("Identifier:")
-                .font(.headline)
-              Text(airport.id)
-            }
-            HStack {
-              Text("Continent:")
-                .font(.headline)
-              Text(airport.continent.rawValue)
-            }
-          }
-          HStack {
-            Text("Coordinates:")
-              .font(.headline)
-            Text("Lat: \(airport.lat)")
-            Text("Lon: \(airport.lon)")
-          }
-        }.padding()
-
+          DetailRow(
+            label: "Name",
+            value: airport.name,
+            icon: Image(systemName: "airplane")
+          )
+          DetailRow(
+            label: "Identifier",
+            value: airport.id,
+            icon: Image(systemName: "barcode.viewfinder")
+          )
+          DetailRow(
+            label: "Continent",
+            value: airport.continent.name,
+            icon: Image(systemName: "map")
+          )
+          DetailRow(
+            label: "Coordinates",
+            value: "Lat: \(airport.lat) Lon: \(airport.lon)",
+            icon: Image(systemName: "mappin.and.ellipse")
+          )
+        }
+        .padding()
         Map(position: .constant(.region(MKCoordinateRegion(
           center: CLLocationCoordinate2D(
             latitude: Double(airport.lat),
@@ -50,7 +48,27 @@ struct AirportInfoView: View {
         }
         .mapStyle(.hybrid)
       }
-    }.navigationTitle(airport.name)
+    }
+    .navigationTitle(airport.name)
+    .toolbar {
+      if let _ = airport.website {
+        Button(action: {
+          isSheetPresented.toggle()
+        }) {
+          Image(systemName: "plus")
+            .foregroundColor(.primary)
+        }
+      }
+    }
+    .sheet(isPresented: $isSheetPresented) {
+      if let website = airport.website {
+        WebView(urlString: website)
+        .frame(
+          maxWidth: .infinity,
+          maxHeight: .infinity
+        )
+      }
+    }
   }
 }
 
@@ -72,6 +90,7 @@ private extension Airport {
     country: .init(
       iso: "GT",
       name: "Guatemala"
-    )
+    ),
+    website: nil
   )
 }

@@ -7,10 +7,11 @@ struct Airport: Codable, Identifiable, Equatable {
   let type: String
   let lat: Float
   let country: Country
+  let website: String?
 
   enum CodingKeys: String, CodingKey {
     case id = "iata"
-    case lon, country, isOpen, name, continent, type, lat
+    case lon, country, isOpen, name, continent, type, lat, website
   }
 }
 
