@@ -22,7 +22,7 @@ struct AirportInfoView: View {
             HStack {
               Text("Continent:")
                 .font(.headline)
-              Text(airport.continent)
+              Text(airport.continent.rawValue)
             }
           }
           HStack {
@@ -66,7 +66,7 @@ private extension Airport {
     lon: -91.916664,
     isOpen: true,
     name: "Coatepeque Airport",
-    continent: "NA",
+    continent: .europe,
     type: "airport",
     lat: 14.766667,
     country: .init(

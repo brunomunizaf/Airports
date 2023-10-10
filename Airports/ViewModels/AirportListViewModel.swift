@@ -1,6 +1,12 @@
 import Foundation
 
 struct SectionItem: Identifiable {
+  var id: String { continent.rawValue }
+  var continent: Continent
+  var subsections: [SubsectionItem]
+}
+
+struct SubsectionItem: Identifiable {
   var id: String { country.iso }
   var country: Country
   var airports: [Airport]
@@ -25,13 +31,23 @@ final class AirportListViewModel: ObservableObject {
       let decoder = JSONDecoder()
       decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-      let airports = try decoder.decode([Airport].self, from: data)
-      let groupedByCountry = Dictionary(grouping: airports, by: \.country)
-        .sorted(by: { $0.key.name < $1.key.name })
+      let allAirports = try decoder.decode([Airport].self, from: data)
 
-      items = groupedByCountry.map { key, value in
-        SectionItem(country: key, airports: value.sorted(by: { $0.name < $1.name }))
+      // Group airports by their continent.
+      let groupedByContinent = Dictionary(grouping: allAirports, by: \.continent)
+
+      // For each group of airports (grouped by continent), further group them by their country.
+      let sectionItems = groupedByContinent.map { (continent, airports) -> SectionItem in
+        let groupedByCountry = Dictionary(grouping: airports, by: \.country)
+          .sorted(by: { $0.key.name < $1.key.name })
+          .map { (countries, itsAirports) in
+            SubsectionItem(country: countries, airports: itsAirports.sorted { $0.name < $1.name })
+          }
+
+        return SectionItem(continent: continent, subsections: groupedByCountry)
       }
+
+      self.items = sectionItems.sorted(by: { $0.continent.name < $1.continent.name })
     } catch {
       print("Error decoding the airport list: \(error)")
     }
